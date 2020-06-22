@@ -120,7 +120,7 @@ namespace BitRacerPro {
     }
 	
 	//% color=#2080ff
-	//% weight=20
+	//% weight=29
     //% blockId=sensor_EndSampling block="Calibrate End|%Color (Line)"
     //% Color.fieldEditor="gridpicker" Color.fieldOptions.columns=1
 	export function CalibrateEnd(Color: LineColor): void {
@@ -133,7 +133,7 @@ namespace BitRacerPro {
     }
 	
 	//% color=#2080ff
-    //% weight=30
+    //% weight=28
     //% blockId=sensor_Line block="read Line position"
     export function readLine(): number {
         pins.i2cWriteNumber(
