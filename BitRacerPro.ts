@@ -146,8 +146,8 @@ namespace BitRacerPro {
     }
     //% color=#3dbf53
     //% weight=20
-    //% blockId=sensor_Line block="Set Zero point"
-    export function Set_Zero_point(): void {
+    //% blockId=Set_Zero_point block="Set Zero point"
+    export function SetZeropoint(): void {
         pins.i2cWriteNumber(
             N76_ADDR,
             0x20,
@@ -157,8 +157,8 @@ namespace BitRacerPro {
     }
     //% color=#3dbf53
     //% weight=19
-    //% blockId=sensor_Line block="read Angle Z"
-    export function Read_Angle_Z(): number {
+    //% blockId=Read_Angle_Z block="read Angle Z"
+    export function ReadAngleZ(): number {
         pins.i2cWriteNumber(
             N76_ADDR,
             0x21,
@@ -169,8 +169,8 @@ namespace BitRacerPro {
     }
     //% color=#3dbf53
     //% weight=18
-    //% blockId=sensor_Line block="read Gyro Z"
-    export function Read_Gyro_Z(): number {
+    //% blockId=Read_Gyro_Z block="read Gyro Z"
+    export function ReadGyroZ(): number {
         pins.i2cWriteNumber(
             N76_ADDR,
             0x22,
@@ -181,8 +181,8 @@ namespace BitRacerPro {
     }
     //% color=#3dbf53
     //% weight=17
-    //% blockId=sensor_Line block="read Accel Y"
-    export function Read_Accel_Y(): number {
+    //% blockId=Read_Accel_Y block="read Accel Y"
+    export function ReadAccelY(): number {
         pins.i2cWriteNumber(
             N76_ADDR,
             0x23,
@@ -193,8 +193,8 @@ namespace BitRacerPro {
     }
     //% color=#3dbf53
     //% weight=16
-    //% blockId=sensor_Line block="Observer Cleat"
-    export function Observer_Cleat(): void {
+    //% blockId=Observer_Cleat block="Observer Cleat"
+    export function ObserverCleat(): void {
         pins.i2cWriteNumber(
             N76_ADDR,
             0x30,
@@ -204,8 +204,8 @@ namespace BitRacerPro {
     }
     //% color=#3dbf53
     //% weight=15
-    //% blockId=sensor_Line block="Read Observer Distance"
-    export function Read_Observer_Distance(): number {
+    //% blockId=Read_Observer_Distance block="Read Observer Distance"
+    export function ReadObserverDistance(): number {
         pins.i2cWriteNumber(
             N76_ADDR,
             0x31,
@@ -216,8 +216,8 @@ namespace BitRacerPro {
     }
      //% color=#3dbf53
     //% weight=14
-    //% blockId=sensor_Line block="Read Observer Velocity"
-    export function Read_Observer_Velocity(): number {
+    //% blockId=Read_Observer_Velocity block="Read Observer Velocity"
+    export function ReadObserverVelocity(): number {
         pins.i2cWriteNumber(
             N76_ADDR,
             0x32,
@@ -228,7 +228,7 @@ namespace BitRacerPro {
     }
     //% color=#3dbf53
     //% weight=0
-    //% blockId=sensor_Line block="read Battery Voltage"
+    //% blockId=readBatteryVoltage block="read Battery Voltage"
     export function readBat(): number {
         pins.i2cWriteNumber(
             N76_ADDR,
