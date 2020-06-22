@@ -226,7 +226,7 @@ namespace BitRacerPro {
         )
         return pins.i2cReadNumber(N76_ADDR, NumberFormat.Int16BE, false) / 1000
     }
-    //% color=#e5ed4a
+    //% color=#3dbfa1
     //% weight=0
     //% blockId=readBatteryVoltage block="read Battery Voltage"
     export function readBat(): number {
