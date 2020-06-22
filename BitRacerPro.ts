@@ -191,7 +191,7 @@ namespace BitRacerPro {
         )
         return pins.i2cReadNumber(N76_ADDR, NumberFormat.Int16BE, false) / 1000
     }
-    //% color=#3dbf53
+    //% color=#40994f
     //% weight=16
     //% blockId=Observer_Cleat block="Observer Cleat"
     export function ObserverCleat(): void {
@@ -202,7 +202,7 @@ namespace BitRacerPro {
             false
         )
     }
-    //% color=#3dbf53
+    //% color=#40994f
     //% weight=15
     //% blockId=Read_Observer_Distance block="Read Observer Distance"
     export function ReadObserverDistance(): number {
@@ -214,7 +214,7 @@ namespace BitRacerPro {
         )
         return pins.i2cReadNumber(N76_ADDR, NumberFormat.Int16BE, false) / 100
     }
-     //% color=#3dbf53
+     //% color=#40994f
     //% weight=14
     //% blockId=Read_Observer_Velocity block="Read Observer Velocity"
     export function ReadObserverVelocity(): number {
@@ -226,7 +226,7 @@ namespace BitRacerPro {
         )
         return pins.i2cReadNumber(N76_ADDR, NumberFormat.Int16BE, false) / 1000
     }
-    //% color=#3dbf53
+    //% color=#e5ed4a
     //% weight=0
     //% blockId=readBatteryVoltage block="read Battery Voltage"
     export function readBat(): number {
