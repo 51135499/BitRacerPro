@@ -156,4 +156,16 @@ namespace BitRacerPro {
         )
         return pins.i2cReadNumber(N76_ADDR, NumberFormat.UInt16BE, false) / 100
     }
+    //% color=#3dbf53
+    //% weight=19
+    //% blockId=sensor_Line block="read Angle"
+    export function Read_Angle(): number {
+        pins.i2cWriteNumber(
+            N76_ADDR,
+            0x21,
+            NumberFormat.UInt8LE,
+            false
+        )
+        return pins.i2cReadNumber(N76_ADDR, NumberFormat.Int16BE, false) / 100
+    }
 }

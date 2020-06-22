@@ -11,5 +11,9 @@
         "BitRacerPro.ts",
         "_locales/zh/BitRacerPro-strings.json"
     ],
-    "public": true
+    "public": true,
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
 }
