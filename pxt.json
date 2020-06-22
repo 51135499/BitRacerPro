@@ -1,0 +1,15 @@
+{
+    "name": "BitRacerPro",
+    "version": "0.0.5",
+    "description": "BitRacerPro test",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "BitRacer.ts",
+        "_locales/zh/BitRacerPro-strings.json"
+    ],
+    "public": true
+}
