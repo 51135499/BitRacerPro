@@ -1,6 +1,6 @@
 const N76_ADDR = 0x10
 
-//% weight=0 color=#f98020 icon="\uf1ba" block="BitRacer"
+//% weight=0 color=#f98020 icon="\uf1ba" block="BitRacerPro"
 namespace BitRacerPro {
     export enum Motors {
         //% blockId="left motor" block="left"
@@ -42,7 +42,7 @@ namespace BitRacerPro {
     }
     
 	//% weight=100
-    //% blockId=motor_MotorRun block="motor|%index|at speed|%PWM"
+    //% blockId=motor_MotorRun block="motor|%index|PWM value|%PWM"
     //% PWM.min=-1000 PWM.max=1000
     //% index.fieldEditor="gridpicker" index.fieldOptions.columns=3
     export function motorRun(index: Motors, PWM: number): void {
@@ -68,7 +68,7 @@ namespace BitRacerPro {
     }
 	
 	//% weight=90
-    //% blockId=sensor_readIR block="read |%SensorID sensor"
+    //% blockId=sensor_readIR block="read IRsensor |%SensorID"
     //% SensorID.fieldEditor="gridpicker" SensorID.fieldOptions.columns=3
     export function readIR(SensorID: IR_Sensors): number {
         pins.i2cWriteNumber(
@@ -80,7 +80,7 @@ namespace BitRacerPro {
         return pins.i2cReadNumber(N76_ADDR, NumberFormat.UInt16BE, false)
     }
 	//% weight=85
-	//% blockId=sensor_readIR2 block="read |%SensorID sensor"
+	//% blockId=sensor_readIR2 block="read IRsensor |%SensorID"
 	//% SensorIDs.min=0 SensorIDs.max=4
     export function readIR2(SensorIDs: number): number {
         pins.i2cWriteNumber(
@@ -193,8 +193,8 @@ namespace BitRacerPro {
     }
     //% color=#40994f
     //% weight=16
-    //% blockId=Observer_Cleat block="Observer Cleat"
-    export function ObserverCleat(): void {
+    //% blockId=Observer_Clear block="Observer Clear"
+    export function ObserverClear(): void {
         pins.i2cWriteNumber(
             N76_ADDR,
             0x30,
