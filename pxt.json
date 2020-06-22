@@ -8,7 +8,7 @@
     },
     "files": [
         "README.md",
-        "BitRacer.ts",
+        "BitRacerPro.ts",
         "_locales/zh/BitRacerPro-strings.json"
     ],
     "public": true
