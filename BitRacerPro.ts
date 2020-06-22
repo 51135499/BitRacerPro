@@ -133,7 +133,7 @@ namespace BitRacerPro {
     }
 	
 	//% color=#2080ff
-    //% weight=20
+    //% weight=30
     //% blockId=sensor_Line block="read Line position"
     export function readLine(): number {
         pins.i2cWriteNumber(
@@ -144,8 +144,90 @@ namespace BitRacerPro {
         )
         return pins.i2cReadNumber(N76_ADDR, NumberFormat.Int16BE, false)
     }
-	//% color=#3dbf53
+    //% color=#3dbf53
+    //% weight=20
+    //% blockId=sensor_Line block="Set Zero point"
+    export function Set_Zero_point(): void {
+        pins.i2cWriteNumber(
+            N76_ADDR,
+            0x20,
+            NumberFormat.UInt8LE,
+            false
+        )
+    }
+    //% color=#3dbf53
     //% weight=19
+    //% blockId=sensor_Line block="read Angle Z"
+    export function Read_Angle_Z(): number {
+        pins.i2cWriteNumber(
+            N76_ADDR,
+            0x21,
+            NumberFormat.UInt8LE,
+            false
+        )
+        return pins.i2cReadNumber(N76_ADDR, NumberFormat.Int16BE, false) / 100
+    }
+    //% color=#3dbf53
+    //% weight=18
+    //% blockId=sensor_Line block="read Gyro Z"
+    export function Read_Gyro_Z(): number {
+        pins.i2cWriteNumber(
+            N76_ADDR,
+            0x22,
+            NumberFormat.UInt8LE,
+            false
+        )
+        return pins.i2cReadNumber(N76_ADDR, NumberFormat.Int16BE, false) / 1000
+    }
+    //% color=#3dbf53
+    //% weight=17
+    //% blockId=sensor_Line block="read Accel Y"
+    export function Read_Accel_Y(): number {
+        pins.i2cWriteNumber(
+            N76_ADDR,
+            0x23,
+            NumberFormat.UInt8LE,
+            false
+        )
+        return pins.i2cReadNumber(N76_ADDR, NumberFormat.Int16BE, false) / 1000
+    }
+    //% color=#3dbf53
+    //% weight=16
+    //% blockId=sensor_Line block="Observer Cleat"
+    export function Observer_Cleat(): void {
+        pins.i2cWriteNumber(
+            N76_ADDR,
+            0x30,
+            NumberFormat.UInt8LE,
+            false
+        )
+    }
+    //% color=#3dbf53
+    //% weight=15
+    //% blockId=sensor_Line block="Read Observer Distance"
+    export function Read_Observer_Distance(): number {
+        pins.i2cWriteNumber(
+            N76_ADDR,
+            0x31,
+            NumberFormat.UInt8LE,
+            false
+        )
+        return pins.i2cReadNumber(N76_ADDR, NumberFormat.Int16BE, false) / 100
+    }
+     //% color=#3dbf53
+    //% weight=14
+    //% blockId=sensor_Line block="Read Observer Velocity"
+    export function Read_Observer_Velocity(): number {
+        pins.i2cWriteNumber(
+            N76_ADDR,
+            0x32,
+            NumberFormat.UInt8LE,
+            false
+        )
+        return pins.i2cReadNumber(N76_ADDR, NumberFormat.Int16BE, false) / 1000
+    }
+    //% color=#3dbf53
+    //% weight=0
     //% blockId=sensor_Line block="read Battery Voltage"
     export function readBat(): number {
         pins.i2cWriteNumber(
@@ -155,17 +237,5 @@ namespace BitRacerPro {
             false
         )
         return pins.i2cReadNumber(N76_ADDR, NumberFormat.UInt16BE, false) / 100
-    }
-    //% color=#3dbf53
-    //% weight=19
-    //% blockId=sensor_Line block="read Angle"
-    export function Read_Angle(): number {
-        pins.i2cWriteNumber(
-            N76_ADDR,
-            0x21,
-            NumberFormat.UInt8LE,
-            false
-        )
-        return pins.i2cReadNumber(N76_ADDR, NumberFormat.Int16BE, false) / 100
     }
 }
