@@ -68,7 +68,7 @@ namespace BitRacerPro {
     }
 	
 	//% weight=90
-    //% blockId=sensor_readIR block="read IRsensor |%SensorID"
+    //% blockId=sensor_readIR block="read |%SensorID sensor"
     //% SensorID.fieldEditor="gridpicker" SensorID.fieldOptions.columns=3
     export function readIR(SensorID: IR_Sensors): number {
         pins.i2cWriteNumber(
