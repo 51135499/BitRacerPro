@@ -224,7 +224,7 @@ namespace BitRacerPro {
             NumberFormat.UInt8LE,
             false
         )
-        return pins.i2cReadNumber(N76_ADDR, NumberFormat.Int16BE, false) / 1000
+        return pins.i2cReadNumber(N76_ADDR, NumberFormat.Int16BE, false) / 100
     }
     //% color=#3dbfa1
     //% weight=0
