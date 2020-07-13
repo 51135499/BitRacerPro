@@ -107,7 +107,7 @@ namespace BitRacerPro {
     }
 	
 	
-	//% color=#FF80ff
+	//% color=#2080ff
 	//% weight=30
 	//% blockId=sensor_StartSampling block="Calibrate Begin"
     export function CalibrateBegin(): void {
